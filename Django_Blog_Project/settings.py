@@ -25,20 +25,20 @@ SECRET_KEY = 'django-insecure-+h63m(xjv*%bave28&v+e6n8qv#-bso!45-3!okjlm=s$-ms(!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost','127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig',
-    'users.apps.UsersConfig',
     'crispy_forms',
     'crispy_bootstrap4',
 ]
@@ -122,9 +122,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

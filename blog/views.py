@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
-from django.views.generic import ListView,DetailView,CreateView,DeleteView,UpdateView
+from django.views.generic import ListView,DetailView,CreateView,DeleteView,UpdateView 
 # Create your views here.
 
 

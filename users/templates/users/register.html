@@ -3,20 +3,20 @@
 {% block content %}
 
 
-    <div class="content-section">
+    <div class="content-section" style="margin-left: 45%; margin-bottom: 50px; padding-right: 50px; width: 500px;">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-1">Join Today</legend>
+                <legend class="border-bottom mb-1" style="text-align: center;">Join Today</legend>
                 {{form|crispy}}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                <button class="btn btn-outline-info " type="submit" style="color: black;margin-left: 40%;  border-color: black;">Sign Up</button>
             </div>
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                Already have an account? <a class="ml-3" href="{% url 'login' %}"> Sign In</a>
+                Already have an account? <a class="ml-3" href="{% url 'login' %}"  style="color: black;"> Sign In</a>
             </small>
         </div>
     </div>
