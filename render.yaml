@@ -1,0 +1,18 @@
+# render.yaml
+services:
+  - type: web
+    name: Django_Blog_Project
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn Django_Blog_Project.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: Django_Blog_Project.settings
+      - key: SECRET_KEY
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: 'django_blog_project.onrender.com'
+    disk:
+      name: persistent_data
+      mountPath: /var/lib/django
